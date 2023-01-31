@@ -2,32 +2,26 @@
 
 <title>{% block title %} Edit User{% endblock %}</title>
 
-
 {% block content %}
 
 <form id="edit_form" method="POST">
+  <label for="first-name">first-name</label><br />
+  <input type="text" name="first_name" value="{{user.first_name}}" /><br />
 
-<label for="first-name">first-name</label><br>
-<input type="text" name="first_name" value="{{user.first_name}}"><br>
+  <br />
 
-<br>
+  <label for="last-name">last-name</label><br />
+  <input type="text" name="last_name" value="{{user.last_name}}" /><br />
 
-<label for="last-name">last-name</label><br>
-<input type="text" name="last_name" value="{{user.last_name}}"><br>
+  <br />
 
-<br>
+  <label for="image-url">image-url</label><br />
+  <input type="text" name="image_url" value="{{user.image_url}}" /><br />
 
-<label for="image-url">image-url</label><br>
-<input type="text" name="image_url" value="{{user.image_url}}"><br>
+  <br />
 
-<br>
-
-<button id="cancel_btn" action="/users">CANCEL</button> 
-<button id="save_btn" type="submit">SAVE</button>
+  <button id="cancel_btn" action="/users">CANCEL</button>
+  <button id="save_btn" type="submit">SAVE</button>
 </form>
-
-
-
-
 
 {% endblock %}
